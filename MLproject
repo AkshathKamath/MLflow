@@ -1,0 +1,8 @@
+## YAML syntax - To create MLflow project
+name: Loan-Prediction
+
+conda_env: conda.yaml ## Environment file
+
+entry_points:
+  main:
+    command: "loan_prediction_mlflow.py" ## Command to execute as entry point
