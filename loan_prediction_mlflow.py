@@ -10,6 +10,8 @@ from sklearn import metrics
 import mlflow
 import os
 
+# mlflow.set_tracking_uri("http://127.0.0.1:5001/")
+
 dataset = pd.read_csv("./Datasets/train.csv")
 numerical_cols = dataset.select_dtypes(include=['int64','float64']).columns.tolist()
 categorical_cols = dataset.select_dtypes(include=['object']).columns.tolist()
@@ -120,7 +122,7 @@ def eval_metrics(actual, pred): ## Metrics for evaluation of a model
 mlflow.set_experiment("Loan-Prediction")
 def mlflow_logging(model, X, y, name):
     with mlflow.start_run() as run:
-        # mlflow.set_tracking_uri("http://0.0.0.0:5001/")
+        # mlflow.set_tracking_uri("http://127.0.0.1:5001/")
         run_id = run.info.run_id
         mlflow.set_tag("run_id", run_id)      
         pred = model.predict(X)
