@@ -1,4 +1,5 @@
-## YAML syntax - To create MLflow project
+##  To create MLflow project
+## YAML syntax
 name: Loan-Prediction
 
 conda_env: conda.yaml ## Environment file
