@@ -5,4 +5,4 @@ conda_env: conda.yaml ## Environment file
 
 entry_points:
   main:
-    command: "loan_prediction_mlflow.py" ## Command to execute as entry point
+    command: "python loan_prediction_mlflow.py" ## Command to execute as entry point
