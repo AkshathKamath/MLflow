@@ -5,33 +5,33 @@
 3. Mlflow Registry: After registering a model, the model can be accessed as 'models:/{model_name}/{model_version}' mentioned in the model_serve python file. This model can also be served on 'localhost:{port_no}' by executing script 'mlflow models serve -m "models:/{model_name}/{model_version}" -p {port_no} --no-conda' and can be tested by sending POST request to 'http://127.0.0.1:{port_no}/invocations'.
 
    Sample JSON input as body for request:  
-    {
-    "dataframe_split": {
-        "columns": [
-            "Gender",
-            "Married",
-            "Dependents",
-            "Education",
-            "Self_Employed",
-            "LoanAmount",
-            "Loan_Amount_Term",
-            "Credit_History",
-            "Property_Area",
-            "TotalIncome"
-        ],
-        "data": [
-            [
-                1.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                4.98745,
-                360.0,
-                1.0,
-                2.0,
-                8.698
-            ]
-        ]
-    }
-}
+    {  
+    "dataframe_split": {  
+        "columns": [  
+            "Gender",  
+            "Married",  
+            "Dependents",  
+            "Education",  
+            "Self_Employed",  
+            "LoanAmount",  
+            "Loan_Amount_Term",  
+            "Credit_History",  
+            "Property_Area",  
+            "TotalIncome"  
+        ],  
+        "data": [  
+            [  
+                1.0,  
+                0.0,  
+                0.0,  
+                0.0,  
+                0.0,  
+                4.98745,  
+                360.0,  
+                1.0,  
+                2.0,  
+                8.698  
+            ]  
+        ]  
+    }  
+}  
